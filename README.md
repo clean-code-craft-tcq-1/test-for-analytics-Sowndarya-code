@@ -2,8 +2,6 @@
 
 Design tests for Analytics functionality on a Battery Monitoring System.
 
-Fill the parts marked '_enter' in the **Tasks** section below.
-
 ## Analysis-functionality to be tested
 
 This section lists the Analysis for which _tests_ must be written.
@@ -27,8 +25,11 @@ Notification must be sent when a new report is available.
 List the dependencies of the Analysis-functionality.
 
 1. Access to the Server containing the telemetrics in a csv file
-1. _enter dependency
-1. _enter dependency
+2. Check on threshold changes if any
+3. Information and details regarding the Notification mechanism - eg: mail - mail ID's 
+4. Latest CSV file
+5. Storage space
+
 
 (add more if needed)
 
@@ -40,21 +41,25 @@ What is included in the software unit-test? What is not? Fill this table.
 |---------------------------|---------------|---
 Battery Data-accuracy       | No            | We do not test the accuracy of data
 Computation of maximum      | Yes           | This is part of the software being developed
-Off-the-shelf PDF converter | _enter Yes/No | _enter reasoning
-Counting the breaches       | _enter Yes/No | _enter reasoning
-Detecting trends            | _enter Yes/No | _enter reasoning
-Notification utility        | _enter Yes/No | _enter reasoning
+Off-the-shelf PDF converter | No            | We do not write SW to generate PDF report
+Counting the breaches       | Yes           | This is one main task of analytics - part of SW
+Detecting trends            | Yes           | This is one main task of analytics - part of SW
+Notification utility        | No            | This is out of analytics scope
 
 ### List the Test Cases
-
-Write tests in the form of `<expected output or action>` from `<input>` / when `<event>`
 
 Add to these tests:
 
 1. Write minimum and maximum to the PDF from a csv containing positive and negative readings
-1. Write "Invalid input" to the PDF when the csv doesn't contain expected data
-1. _enter a test
-1. _enter a test
+2. Write "Invalid input" to the PDF when the csv doesn't contain expected data
+3. Write the count of breach to the PDF when readings cross thresholds
+4. Write trends of date to the PDF when the readings increasing for more than 30 minutes
+5. Write "Old record" to the PDF when the csv is older than a week
+6. Write " CSV missing" to the PDF when CSV is not present
+7. Write "PDF Report of BMS" to the notification in event of a new PDF
+8. Write "Issues with PDF generation" to the notification in case of any technical issues in the course of PDF generation or earlier
+
+
 
 (add more)
 
@@ -64,12 +69,12 @@ Consider the tests for each functionality below.
 In those tests, identify inputs and outputs.
 Enter one part that's real and another part that's faked/mocked.
 
-| Functionality            | Input        | Output                      | Faked/mocked part
-|--------------------------|--------------|-----------------------------|---
-Read input from server     | csv file     | internal data-structure     | Fake the server store
-Validate input             | csv data     | valid / invalid             | None - it's a pure function
-Notify report availability | _enter input | _enter output               | _enter fake or mock
-Report inaccessible server | _enter input | _enter output               | _enter fake or mock
-Find minimum and maximum   | _enter input | _enter output               | _enter fake or mock
-Detect trend               | _enter input | _enter output               | _enter fake or mock
-Write to PDF               | _enter input | _enter output               | _enter fake or mock
+| Functionality            | Input        | Output                               | Faked/mocked part
+|--------------------------|--------------|--------------------------------------|---
+Read input from server     | csv file     | internal data-structure              | Fake the server store
+Validate input             | csv data     | valid / invalid                      | None - it's a pure function
+Notify report availability | PDF          | the notification mechanism trigger the message  |no receiver of the notification - it can be mocked 
+Report inaccessible server | access denial message | report it via notification  | no receiver of the notification - it can be mocked 
+Find minimum and maximum   | csv data     | the minimum and the maximum value    | None - it's a pure function
+Detect trend               | csv data     | the detected trend                   | None - it's a pure function
+Write to PDF               | processed analytics results | PDF                   | PDF generation 

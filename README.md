@@ -2,8 +2,6 @@
 
 Design tests for Analytics functionality on a Battery Monitoring System.
 
-Fill the parts marked '_enter' in the **Tasks** section below.
-
 ## Analysis-functionality to be tested
 
 This section lists the Analysis for which _tests_ must be written.
@@ -49,8 +47,6 @@ Detecting trends            | Yes           | This is one main task of analytics
 Notification utility        | No            | This is out of analytics scope
 
 ### List the Test Cases
-
-Write tests in the form of `<expected output or action>` from `<input>` / when `<event>`
 
 Add to these tests:
 

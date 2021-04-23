@@ -73,12 +73,12 @@ Consider the tests for each functionality below.
 In those tests, identify inputs and outputs.
 Enter one part that's real and another part that's faked/mocked.
 
-| Functionality            | Input        | Output                      | Faked/mocked part
-|--------------------------|--------------|-----------------------------|---
-Read input from server     | csv file     | internal data-structure     | Fake the server store
-Validate input             | csv data     | valid / invalid             | None - it's a pure function
-Notify report availability | _enter input | _enter output               | _enter fake or mock
-Report inaccessible server | _enter input | _enter output               | _enter fake or mock
-Find minimum and maximum   | _enter input | _enter output               | _enter fake or mock
-Detect trend               | _enter input | _enter output               | _enter fake or mock
-Write to PDF               | _enter input | _enter output               | _enter fake or mock
+| Functionality            | Input        | Output                               | Faked/mocked part
+|--------------------------|--------------|--------------------------------------|---
+Read input from server     | csv file     | internal data-structure              | Fake the server store
+Validate input             | csv data     | valid / invalid                      | None - it's a pure function
+Notify report availability | PDF          | the notification mechanism trigger the message  |no receiver of the notification - it can be mocked 
+Report inaccessible server | access denial message | report it via notification  | no receiver of the notification - it can be mocked 
+Find minimum and maximum   | csv data     | the minimum and the maximum value    | None - it's a pure function
+Detect trend               | csv data     | the detected trend                   | None - it's a pure function
+Write to PDF               | processed analytics results | PDF                   | PDF generation 

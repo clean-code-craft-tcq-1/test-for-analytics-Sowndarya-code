@@ -28,8 +28,9 @@ List the dependencies of the Analysis-functionality.
 
 1. Access to the Server containing the telemetrics in a csv file
 2. Check on threshold changes if any
-3. Information regarding the Notification mechanism - eg: mail - mail ID's 
+3. Information and details regarding the Notification mechanism - eg: mail - mail ID's 
 4. Latest CSV file
+
 
 (add more if needed)
 
@@ -41,10 +42,10 @@ What is included in the software unit-test? What is not? Fill this table.
 |---------------------------|---------------|---
 Battery Data-accuracy       | No            | We do not test the accuracy of data
 Computation of maximum      | Yes           | This is part of the software being developed
-Off-the-shelf PDF converter | _enter Yes/No | _enter reasoning
-Counting the breaches       | _enter Yes/No | _enter reasoning
-Detecting trends            | _enter Yes/No | _enter reasoning
-Notification utility        | _enter Yes/No | _enter reasoning
+Off-the-shelf PDF converter | No            | We do not write SW to generate PDF report
+Counting the breaches       | Yes           | This is one main task of analytics - part of SW
+Detecting trends            | Yes           | This is one main task of analytics - part of SW
+Notification utility        | No            | This is out of analytics scope
 
 ### List the Test Cases
 

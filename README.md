@@ -30,6 +30,7 @@ List the dependencies of the Analysis-functionality.
 2. Check on threshold changes if any
 3. Information and details regarding the Notification mechanism - eg: mail - mail ID's 
 4. Latest CSV file
+5. Storage space
 
 
 (add more if needed)

@@ -27,8 +27,9 @@ Notification must be sent when a new report is available.
 List the dependencies of the Analysis-functionality.
 
 1. Access to the Server containing the telemetrics in a csv file
-1. _enter dependency
-1. _enter dependency
+2. Check on threshold changes if any
+3. Information regarding the Notification mechanism - eg: mail - mail ID's 
+4. Latest CSV file
 
 (add more if needed)
 

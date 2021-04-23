@@ -56,8 +56,11 @@ Add to these tests:
 
 1. Write minimum and maximum to the PDF from a csv containing positive and negative readings
 2. Write "Invalid input" to the PDF when the csv doesn't contain expected data
-3. Write trends like current readings 
-4. _enter a test
+3. Write the count of breach to the PDF when readings cross thresholds
+4. Write trends of date to the PDF when the readings increasing for more than 30 minutes
+5. Write "Old record" to the PDF when the csv is older than a week
+6. Write " CSV missing' to the PDF when CSV is not present
+
 
 (add more)
 

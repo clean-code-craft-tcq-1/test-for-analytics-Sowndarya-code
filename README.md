@@ -59,7 +59,9 @@ Add to these tests:
 3. Write the count of breach to the PDF when readings cross thresholds
 4. Write trends of date to the PDF when the readings increasing for more than 30 minutes
 5. Write "Old record" to the PDF when the csv is older than a week
-6. Write " CSV missing' to the PDF when CSV is not present
+6. Write " CSV missing" to the PDF when CSV is not present
+7. Write "PDF Report of BMS" to the notification in event of a new PDF
+
 
 
 (add more)

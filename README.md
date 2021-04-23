@@ -61,6 +61,7 @@ Add to these tests:
 5. Write "Old record" to the PDF when the csv is older than a week
 6. Write " CSV missing" to the PDF when CSV is not present
 7. Write "PDF Report of BMS" to the notification in event of a new PDF
+8. Write "Issues with PDF generation" to the notification in case of any technical issues in the course of PDF generation or earlier
 
 
 
